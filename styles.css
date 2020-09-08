@@ -535,11 +535,13 @@ canvas{
           z-index: 999999;
       }
 
-      .formArea{
+      .formArea, #formBody{
           width: 100%;
-          margin: 0;
+          margin: 0 auto;
       }
-
+      canvas{
+          width: 100%;
+      }
       #signMeUp svg path{
           fill: #e8475b !important;
       }
@@ -556,5 +558,20 @@ canvas{
         font-size: 14px;
     }
     
-     
+
+    #letter{
+        width: 100%;
+    }
+     #visualExplanation{
+         margin: 50px auto;
+     }
+
+     .beforeBegin{
+         width: 100%;
+     }
+
+     #fullSiteBtn{
+         font-size: 14px;
+         padding: 10px;
+     }
 }
