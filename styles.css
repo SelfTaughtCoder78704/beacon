@@ -1,0 +1,537 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+#screenWrapper{
+    position: relative;
+    width: 100%;
+    height:100vh;
+}
+
+#mainScreen{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns:50% 50%;
+}
+
+#left{
+    background: white;
+    background: url(/images/solar2.png) no-repeat;
+    background-size: cover;
+    
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+}
+
+#right{
+    background: #154D71;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#logo img{
+    width: 200px;
+}
+
+#leftContent{
+    margin-top: 100px;
+}
+
+#leftContent h2{
+    font-size: 48px;
+    color: #e8475b;
+    /* text-decoration: underline; */
+    font-family: 'Alfa Slab One', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.726);
+}
+
+#leftFooter {
+    margin-top: 100px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+}
+
+#demo{
+    text-align: center;
+}
+
+#rightFooter{
+    width: 100%;
+    
+    
+    position: absolute;
+    bottom: 0;
+}
+
+#leftFooter p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#leftFooter img{
+    width: 100px;
+    border-radius: 5px;
+}
+
+#gifBox{
+    position: relative;
+    
+}
+
+#gifBox img{
+    border-radius: 5px;
+    width: 70%;
+}
+
+#gifBox svg{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 30%;
+    max-width: 200px;
+    max-height: 200px;
+    
+}
+
+
+
+#rightOverlay{
+    width: 100%;
+    height: 100%;
+    background: url(/images/solar.png) no-repeat;
+    background-size: cover;
+    padding: 40px 40px 20px 60px;
+    color: white;
+    
+}
+
+#bonusList{
+    list-style: none;
+    padding:0;
+    margin:50px 0;
+}
+
+#bonusList p{
+    font-size: 24px;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+#rightOverlay h3{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+   
+}
+
+#clockBox, #buttonBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+
+.myBtn{
+    width: 250px;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Alfa Slab One', cursive;
+    transition: 0.5s;
+}
+
+.myBtn2{
+    width: 250px;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Alfa Slab One', cursive;
+    transition: 0.5s;
+    margin: 40px auto;
+    background: #e8475b;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+}
+
+.myBtn2:hover{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.582);
+}
+
+#sign{
+    border-radius: 0 100px 100px 0;
+    border: none;
+    background: #92A159;
+    transition: 0.5s;
+    color: #EEEBAB;
+}
+
+#work{
+    border-radius: 100px 0 0 100px;
+    border: none;
+    background: #EEEBAB;
+    transition: 0.5s;
+    color: #92A159;
+    
+}
+
+.myBtn:hover{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.582);
+    background: #e8475b !important;
+    color: white !important;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #vidModal video{
+      width: 100%;
+      margin: 0 auto;
+  }
+
+  #playBtnWhite{
+      display: none;
+  }
+
+  #howItWorks{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100vh;
+      background: url(/images/fullScreen.png) no-repeat;
+      background-size: cover;
+  }
+
+  #howItWorks svg, #signMeUp svg{
+      position: absolute;
+      top: 50px;
+      right: 100px;
+  }
+  .fullOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.342);
+  }
+  #signMeUp{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: #154D71;
+}
+
+.formArea{
+    width: 60%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    background: #EEEBAB;
+    justify-content: center;
+    padding: 20px;
+    
+    border-radius: 0.3rem;
+}
+
+.formArea input, .formArea select {
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.formArea input[type="file"]{
+    background: white;
+}
+
+.formArea button{
+    padding: 10px 20px;
+}
+
+#formBody{
+    margin-top: 50px;
+}
+
+form{
+    text-align: center;
+}
+form p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.submitAreaBtn button{
+    background: #e8475b;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.submitAreaBtn button:hover{
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.582);
+}
+
+#cardInfo, #achInfo{
+    display: none;
+}
+
+#myFile{
+    border: 2px solid black;
+    border-radius: 0.3rem;
+}
+.myMessage{
+    display: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+#letter{
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid black;
+    background: white;
+    padding: 10px 20px;
+}
+
+canvas{
+    background: white;
+  
+}
+
+#saveBtn{
+    background: #154D71;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+}
+#clearBtn{
+    background:#e8475b;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+#howBody{
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.header h3{
+    font-size: 36px;
+    color: white;
+
+}
+.header p{
+    color: white;
+    font-size: 24px;
+    line-height: 4rem;
+}
+
+#visualExplanation{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    grid-gap: 1em;
+}
+
+.box{
+    background: white;
+    border-radius: 0.3rem;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.box img{
+    width: 100px;
+}
+
+@media only screen and (max-width: 768px){
+    #screenWrapper{
+        width: 100%;
+        height: auto;
+    }
+    #mainScreen{
+        display: block;
+    }
+    #leftContent h2{
+        font-size: 2rem;
+        color: black;
+        text-shadow: none;
+    }
+
+    #logo img {
+        width: 200px;
+    }
+    #rightOverlay{
+        padding: 10px;
+    }
+    #rightOverlay h1{
+        font-size: 1.5rem;
+    }
+
+    #rightOverlay h3{
+        font-size: 22px;
+    }
+
+    #left{
+        padding: 10px;
+    }
+
+    #gifBox svg {
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        width: 40%;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    #gifBox img {
+        width: 100%;
+    }
+
+    #leftFooter{
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
+        position: static;
+    }
+
+    #leftFooter p {
+        /* font-size: 12px; */
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #leftContent{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .myBtn {
+        width: 150px;
+        height: 70px;
+        padding: 5px;
+        font-size: 12px;
+    }
+    #rightFooter{
+        text-align: center;
+        position: static;
+    }
+    .modal-content {
+        
+        width: 90%; /* Could be more or less, depending on screen size */
+      }
+
+      #sign, #work{
+          font-size: 15px;
+          width: 100%;
+          border-radius: 0 !important;
+      }
+
+      #howItWorks{
+        height: 100%;
+      }
+
+      .header p{
+          line-height: unset;
+          font-size: 18px;
+      }
+
+      #howBody{
+          width: 90%;
+      }
+
+      #howItWorks svg, #signMeUp svg {
+          top: 5px;
+          right: 5px;
+          z-index: 999999;
+      }
+
+      .formArea{
+          width: 100%;
+          margin: 0;
+      }
+
+      #signMeUp svg path{
+          fill: #e8475b !important;
+      }
+
+      .formArea input, .formArea select {
+        display: block;
+        margin: 20px auto;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    form p{
+        font-size: 14px;
+    }
+    
+     
+}
