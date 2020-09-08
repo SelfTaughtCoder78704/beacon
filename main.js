@@ -1,14 +1,21 @@
 let modal = document.getElementById("vidModal");
+let modal2 = document.getElementById("welcomeModal");
 const vid = document.querySelector('#vidModal video')
 const work = document.getElementById('work')
 const sign = document.getElementById('sign')
 const closeWork = document.querySelector('#howItWorks svg')
 const closeSign = document.querySelector('#signMeUp svg')
+let fullSignBtn = document.getElementById('fullSiteBtn')
+fullSignBtn.addEventListener('click', function(){
+  modal2.style.display = 'none'
+  showSign()
+})
 // Get the button that opens the modal
 let btn = document.getElementById("playBtn");
 
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
+let span2 = document.querySelector('#welcomeModal span')
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -22,9 +29,14 @@ span.onclick = function() {
   vid.pause()
 }
 
+span2.onclick = function() {
+  modal2.style.display = "none";
+  
+}
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == modal || event.target == modal2) {
     modal.style.display = "none";
     vid.pause()
   }
@@ -47,11 +59,13 @@ function hideWhite(){
 work.addEventListener('click', showWork)
 function showWork(){
     document.getElementById('howItWorks').style.display = 'block'
+    window.scrollTo(0, 0);
 }
 
 sign.addEventListener('click', showSign)
 function showSign(){
     document.getElementById('signMeUp').style.display = 'block'
+    window.scrollTo(0, 0);
 }
 
 closeSign.addEventListener('click', function(){
