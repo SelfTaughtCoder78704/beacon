@@ -290,8 +290,11 @@ body{
 .beforeBegin{
     width:60%;
     margin: 0 auto;
-    color: white;
+    color: #154D71;
     text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 0.3rem;
 }
 
 .beforeBegin h3{
