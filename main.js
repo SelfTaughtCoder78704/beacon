@@ -128,7 +128,7 @@ function testCreditCard() {
 let cardOrCheck = document.getElementById('howToPay')
 
 cardOrCheck.addEventListener('click', showCorrectSystem)
-
+cardOrCheck.addEventListener('ontouchstart', showCorrectSystem)
 function showCorrectSystem(){
   document.getElementById('cardInfo').style.display = 'none'
   document.getElementById('achInfo').style.display = 'none'
