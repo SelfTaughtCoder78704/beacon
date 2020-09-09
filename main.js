@@ -130,6 +130,8 @@ let cardOrCheck = document.getElementById('howToPay')
 cardOrCheck.addEventListener('click', showCorrectSystem)
 
 function showCorrectSystem(){
+  document.getElementById('cardInfo').style.display = 'none'
+  document.getElementById('achInfo').style.display = 'none'
   if(cardOrCheck.value === 'Credit-Debit'){
     document.getElementById('achInfo').style.display = 'none'
     document.getElementById('cardInfo').style.display = 'block'
