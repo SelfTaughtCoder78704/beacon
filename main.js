@@ -14,7 +14,7 @@ fullSignBtn.addEventListener('click', function(){
 let btn = document.getElementById("playBtn");
 
 // Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+let span = document.querySelector("#vidModal .close")
 let span2 = document.querySelector('#welcomeModal span')
 
 // When the user clicks on the button, open the modal
@@ -134,7 +134,7 @@ function showCorrectSystem(){
     document.getElementById('achInfo').style.display = 'none'
     document.getElementById('cardInfo').style.display = 'block'
   }else{
-    document.getElementById('achInfo').style.display = 'block'
+    document.getElementById('achInfo').style.display = 'grid'
     document.getElementById('cardInfo').style.display = 'none'
     document.getElementById('CardNumber').value = ''
   }
@@ -288,3 +288,35 @@ function dataURItoBlob(dataURI) {
 
 let lastSign = document.getElementById('lastSign')
 lastSign.addEventListener('click', showSign)
+
+
+let listOfWorkers = [
+ ' Andrew Thomas',
+'Arthur Stameris',
+'Cheryl Cadrin',
+'Ernest Lee',
+'George Criss',
+'Jim Donnelly',
+'Kurt Matheson',
+'Leandra Khouri',
+'Mike Riley',
+'Paul Lechiaro',
+'Paul Smith',
+'Robert Sella',
+'Sean Collins'
+]
+
+let agentsSelector = document.getElementById('agents')
+listOfWorkers.forEach(worker => {
+  // create new option element
+var opt = document.createElement('option');
+
+// create text node to add to option element (opt)
+opt.appendChild( document.createTextNode(worker) );
+
+// set value property of opt
+opt.value = worker; 
+
+// add opt to end of select box (sel)
+agentsSelector.appendChild(opt)
+})

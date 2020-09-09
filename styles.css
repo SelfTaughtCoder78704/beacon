@@ -231,7 +231,11 @@ body{
 
   #welcomeModal .modal-content {
       text-align: center;
-      background-color: #92A159;
+      background: url(/images/welcome.png) no-repeat;
+      background-size: cover;
+      font-family: 'Alfa Slab One', cursive;
+      background-position: bottom;
+      color: white;
   }
   #welcomeModal .modal-content p{
       font-size: 36px;
@@ -329,12 +333,12 @@ body{
 
 .beforeBegin p
 
-.formArea input, .formArea select {
-    display: block;
-    margin: 20px auto;
-    width: 70%;
-    padding: 10px;
-    font-size: 24px;
+ input,  select {
+    display: block !important;
+    margin: 20px auto !important;
+    width: 70% !important;
+    padding: 10px !important;
+    font-size: 24px !important;
 }
 
 .formArea input[type="file"]{
@@ -378,6 +382,22 @@ form p{
 
 #cardInfo, #achInfo{
     display: none;
+}
+
+#achInfo{
+    
+    width: 100%;
+    margin: 0 auto;
+}
+
+#achInfo input, #zip {
+    width: 70%;
+    margin: 0 auto;
+    display: block !important;
+    margin: 20px auto !important;
+    width: 70% !important;
+    padding: 10px !important;
+    font-size: 24px !important;
 }
 
 #myFile{
@@ -469,6 +489,21 @@ canvas{
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.582);
 }
 @media only screen and (max-width: 768px){
+    #achInfo{
+    
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #achInfo input, #zip {
+        
+        margin: 0 auto;
+        display: block !important;
+        margin: 20px auto !important;
+        width:100% !important;
+        padding: 10px !important;
+        font-size: 24px !important;
+    }
     #screenWrapper{
         width: 100%;
         height: auto;
@@ -585,11 +620,11 @@ canvas{
       }
 
       .formArea input, .formArea select {
-        display: block;
-        margin: 20px auto;
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
+        display: block !important;
+        margin: 20px auto !important;
+        width: 100% !important;
+        padding: 10px !important;
+        font-size: 16px !important;
     }
 
     form p{
@@ -611,5 +646,10 @@ canvas{
      #fullSiteBtn{
          font-size: 16px;
          padding: 10px;
+     }
+
+     #welcomeModal .modal-content{
+         background-position: left;
+         color: rgb(7, 7, 7);
      }
 }
