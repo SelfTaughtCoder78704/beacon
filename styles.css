@@ -495,7 +495,7 @@ canvas{
         margin: 0 auto;
     }
     
-    #achInfo input, #zip {
+    #achInfo input, #zip, #CardNumber {
         
         margin: 0 auto;
         display: block !important;
